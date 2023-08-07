@@ -14,7 +14,7 @@ LISTEN: APP_SEND -> SYN_SENT
 LISTEN: APP_CLOSE -> CLOSED
 SYN RCVD: APP_CLOSE -> FIN_WAIT_1
 SYN RCVD: RCV_ACK -> ESTABLISHED
-SYN_SENT: RCV_SYN -> SYN RCVD
+SYN_SENT: RCV_SYN -> SYN_RCVD
 SYN SENT: RCV_SYN_ACK -> ESTABLISHED
 SYN SENT: APP_CLOSE -> CLOSED
 ESTABLISHED: APP_CLOSE -> FIN_WAIT_1
@@ -34,5 +34,5 @@ Now, the input will be an array of events. The solution function you will implem
 Input                                                                       Output
 ["APP_PASSIVE OPEN", "APP SEND", "RCV_SYN_ACK"]                             "ESTABLISHED"
 ["APP_ACTIVE_OPEN"]                                                         "SYN_SENT"
-["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "APP_CLOSE", "RCV FIN ACK", "RCV_ACK]    "ERROR"
+["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "APP_CLOSE", "RCV_FIN ACK", "RCV_ACK]    "ERROR"
 
