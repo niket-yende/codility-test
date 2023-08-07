@@ -15,8 +15,8 @@ LISTEN: APP_CLOSE -> CLOSED
 SYN RCVD: APP_CLOSE -> FIN_WAIT_1
 SYN RCVD: RCV_ACK -> ESTABLISHED
 SYN_SENT: RCV_SYN -> SYN_RCVD
-SYN SENT: RCV_SYN_ACK -> ESTABLISHED
-SYN SENT: APP_CLOSE -> CLOSED
+SYN_SENT: RCV_SYN_ACK -> ESTABLISHED
+SYN_SENT: APP_CLOSE -> CLOSED
 ESTABLISHED: APP_CLOSE -> FIN_WAIT_1
 ESTABLISHED: RCV_FIN -> CLOSE_WAIT
 FIN_WAIT_1: RCV_FIN -> CLOSING
@@ -32,7 +32,7 @@ If an event is not applicable to the current state, your code will return 'ERROR
 
 Now, the input will be an array of events. The solution function you will implement should return the final state as a string, all caps, as in the next examples:
 Input                                                                       Output
-["APP_PASSIVE OPEN", "APP SEND", "RCV_SYN_ACK"]                             "ESTABLISHED"
+["APP_PASSIVE_OPEN", "APP_SEND", "RCV_SYN_ACK"]                             "ESTABLISHED"
 ["APP_ACTIVE_OPEN"]                                                         "SYN_SENT"
-["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "APP_CLOSE", "RCV_FIN ACK", "RCV_ACK]    "ERROR"
+["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "APP_CLOSE", "RCV_FIN_ACK", "RCV_ACK]    "ERROR"
 
