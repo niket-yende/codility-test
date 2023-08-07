@@ -1,0 +1,48 @@
+Food ratings
+
+A restaurant has launched an app for their food delivery. n reviews about various of their menu items have been submitted.
+Users have submitted a rating out of 5 (1 being worst and 5 being best). The manager wants to know the most loved dish in the restaurant.
+Find out the dish with the highest average rating.
+
+Note: If two dishes are rated the same, return the dish with the smallest ID.
+
+Function description:
+Complete the function solution() provided in the editor. The function takes the following 2 parameters and returns the solution result.
+    n -> Represents the number of reviews (this parameter is for internal purposes, don't remove it from the function)
+    ratings -> Represents the reviews of each dish
+
+The input format for custom testing
+Note: Use this input format if you are testing against the custom input.
+
+Next, the n line contains two integers each, the ID and rating of the i review.
+
+Output format
+Print a single integer representing the ID of the highest-rated dish.
+Constraints
+1 ≤ n ≤ 10^5
+1 ≤ ratings[i][0] ≤ 10^9
+1 ≤ ratings[i][1] ≤ 5
+
+Sample input
+4
+Sample output
+123
+
+512 2
+123 3
+987 4
+123 5
+
+Explanation
+Given
+Input:
+n=4 (you will see this as a parameter in your solution method, but don't worry about it. This parameter is only for our internal use)
+ratings=[[512, 3], [123, 3], [987, 4], [123, 5]]
+Output: 123
+Approach
+Since we need to return the dish with the highest average rating we need to calculate the average first
+The unique dish that is repeated is the 123, so its average rating will be:
+average= (3+5)/2 = 4
+The other dishes only have one rating. The average ratings are:
+average ratings = [[512, 3) [123, 4] [987, 4]]
+Now, both dishes 123 and 987 have average ratings of 4 but 123 is numerically smaller, which means the solution should return 123
