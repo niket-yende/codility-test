@@ -14,7 +14,6 @@ public class FindFinalState {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter wr = new PrintWriter(System.out);
 
-//        int n = Integer.parseInt(br.readLine().trim());
         String[] arr_actions = br.readLine().split(" ");
 
         String out_ = solution(arr_actions);
@@ -45,6 +44,8 @@ public class FindFinalState {
             if(!foundEvent) {
                 result = "ERROR";
                 break;
+            } else {
+                result = currentState;
             }
         }
 
