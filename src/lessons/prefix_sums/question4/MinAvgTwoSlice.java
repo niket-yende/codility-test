@@ -28,6 +28,7 @@ public class MinAvgTwoSlice {
             }
         }
 
+        // Corner case: find the avg of last 2 elements
         int avg_2 = (array[array.length-2]+array[array.length-1]) / 2;
         if( avg_2 < min){
             min = avg_2;
