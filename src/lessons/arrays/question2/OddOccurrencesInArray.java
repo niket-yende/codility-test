@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
+/**
+ * Find value that occurs in odd number of elements.
+ * Reference: https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
+ */
 public class OddOccurrencesInArray {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
