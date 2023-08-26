@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * Find a maximum sum of a compact subsequence of array elements.
  * Reference: https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_slice_sum/
+ *            https://github.com/Mickey0521/Codility/blob/master/MaxSliceSum.java
  */
 public class MaxSliceSum {
     public static void main(String[] args) {
