@@ -1,4 +1,4 @@
-package lessons.binary_search_algorithm;
+package lessons.binary_search_algorithm.question1;
 
 /**
  * Divide array A into K blocks and minimize the largest sum of any block.
