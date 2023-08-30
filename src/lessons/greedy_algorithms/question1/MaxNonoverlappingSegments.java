@@ -7,7 +7,8 @@ import java.io.PrintWriter;
 
 /**
  * Find a maximal set of non-overlapping segments.
- * https://app.codility.com/programmers/lessons/16-greedy_algorithms/max_nonoverlapping_segments/
+ * Reference: https://app.codility.com/programmers/lessons/16-greedy_algorithms/max_nonoverlapping_segments/
+ *            https://github.com/Mickey0521/Codility/blob/master/MaxNonoverlappingSegments.java
  */
 public class MaxNonoverlappingSegments {
     public static void main(String[] args) throws IOException {
