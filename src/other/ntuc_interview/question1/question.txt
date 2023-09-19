@@ -1,0 +1,9 @@
+String challenge
+Have the function stringchallenge (str) read the str parameter being passed which will contain the written out version of the numbers 0-9 and the words "minus" or "plus" and convert the expression into an actual final number written out as well. For example: if str is "foursixminustwotwoplusonezero" then this converts to "46 - 22 + 10" which evaluates to 34  and your program should return the final string threefour. If your final answer is negative it should include the word "negative."
+
+Once your function is working, take the final output string and concatenate it with your challengeToken, and then replace every fourth character with an underscore.
+Your ChallengeToken: taqgzk826
+Examples
+Input: "onezeropluseight"
+Output: oneeight
+Final Output: one_igh_taq_zk8_6
