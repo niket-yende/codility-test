@@ -6,9 +6,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 /**
- * Write a program to push the latest occurrence of a character to latest and remove the previous occurence.
+ * Write a program to push the latest occurrence of a character to latest and remove the previous occurrence.
  * Also add hyphen between the characters. Once your function is working, take the final output string and concatenate it with your challengeToken,
  * and then replace every fourth character with an underscore.
  * Input: A B C B C A
@@ -44,17 +45,19 @@ public class ArrayChallenge {
 
         String challengeToken = "taqgzk826";
         String output = addHyphen(list) + challengeToken;
+        System.out.println("output: "+output);
 
         return printFinalOut(output);
     }
 
     static String addHyphen(List<String> input) {
         StringBuilder sb = new StringBuilder();
+        StringJoiner sj = new StringJoiner("-");
         for (String item: input) {
-            sb.append(item).append("-");
+            sj.add(item);
         }
 
-        String out = sb.substring(0, sb.length() - 1);
+        String out = sj.toString();
 
         return out;
     }
