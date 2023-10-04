@@ -2,6 +2,7 @@ package other.test;
 
 /**
  * Find the start of loop in a linked list
+ * Reference: https://stackoverflow.com/questions/1536944/detecting-the-start-of-a-loop-in-a-singly-linked-link-list
  */
 public class LinkedListStart {
     private Node head;
