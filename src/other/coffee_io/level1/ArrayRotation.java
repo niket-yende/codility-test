@@ -1,4 +1,4 @@
-package other.coffee_io;
+package other.coffee_io.level1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
