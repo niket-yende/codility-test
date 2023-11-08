@@ -18,8 +18,9 @@ public class LongestSequence {
         System.out.println(ans);
     }
 
-    static int solution(int[] a, int n) {
+    static int solution1(int[] a, int n) {
         List<Integer> longestSubSequence = new ArrayList<>();
+
         for (int i = 0; i < a.length; i++) {
             List<Integer> subSequence = new ArrayList<>();
             subSequence.add(a[i]);
@@ -41,6 +42,23 @@ public class LongestSequence {
         }
 
         return longestSubSequence.size() > 1 ? longestSubSequence.size() : 0;
+    }
+
+    static int solution(int[] a, int n) {
+        int[] dp = new int[n];
+        int maxLength = 0;
+
+        for (int i = 0; i < n; i++) {
+            dp[i] = 1;
+            for (int j = 0; j < i; j++) {
+                if (Math.abs(a[i] - a[j]) == 1) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            maxLength = Math.max(maxLength, dp[i]);
+        }
+
+        return maxLength;
     }
 
     static int findDifference(int x, int y) {
