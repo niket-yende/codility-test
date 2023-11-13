@@ -8,6 +8,8 @@ import java.util.Scanner;
  * 3
  * Output:
  * 3
+ *
+ * Reference: https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
  */
 public class ClimbingStairs {
     public static void main(String[] args) {
