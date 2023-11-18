@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 /**
  * Program to reverse k nodes.
- * Reference: https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/
+ * Input:
+ * 34
+ * 26 766 145 414 463 169 226 279 966 5 847 385 968 693 617 887 262 606 708 98 135 523 39 675 900 21 497 879 379 290 48 22 125 25
+ * 6
+ * Output:
+ * 169 463 414 145 766 26 385 847 5 966 279 226 606 262 887 617 693 968 675 39 523 135 98 708 290 379 879 497 21 900 48 22 125 25
  */
 public class ReverseKNodes {
     static Node head;
@@ -20,51 +25,49 @@ public class ReverseKNodes {
         }
     }
 
-    /* Function to reverse the linked list */
-    static Node reverseKNodes(Node node, int k) {
-        Node current = node;
-        Node next = null, prev = null;
-        int count = 0;
-
-        /*1) reverse first k nodes of the linked list */
-        while (current != null && count < k) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-            count++;
-        }
-
-        /* 2) Now head points to the kth node.  So change next
-         of head to (k+1)th node*/
-        if (node != null) {
-            node.next = current;
-        }
-
-        /* 3) We do not want to reverse next k nodes. So move the current
-         pointer to skip next k nodes */
-        count = 0;
-        while (count < k - 1 && current != null) {
-            current = current.next;
-            count++;
-        }
-
-        /* 4) Recursively call for the list starting from current->next.
-         And make rest of the list as next of first node */
-        if (current != null) {
-            current.next = reverseKNodes(current.next, k);
-        }
-
-        /* 5) prev is new head of the input list */
-        return prev;
-    }
-
-    // prints content of double linked list
     static void printList(Node node) {
         while (node != null) {
             System.out.print(node.data + " ");
             node = node.next;
         }
+    }
+
+    public static Node reverseKGroup(Node head, int k) {
+        if (head == null || k == 1) {
+            return head;
+        }
+
+        int count = 0;
+        Node curr = head;
+        while (curr != null) {
+            count++;
+            curr = curr.next;
+        }
+
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node prevGroupEnd = dummy;
+        Node currGroupStart = head;
+
+        for (int i = 0; i < count / k; i++) {
+            Node groupEnd = currGroupStart;
+            Node nextGroupStart = currGroupStart.next;
+
+            for (int j = 1; j < k; j++) {
+                Node temp = nextGroupStart.next;
+                nextGroupStart.next = groupEnd;
+                groupEnd = nextGroupStart;
+                nextGroupStart = temp;
+            }
+
+            prevGroupEnd.next = groupEnd;
+            currGroupStart.next = nextGroupStart;
+
+            prevGroupEnd = currGroupStart;
+            currGroupStart = nextGroupStart;
+        }
+
+        return dummy.next;
     }
 
     public static void main(String[] args) {
@@ -88,8 +91,6 @@ public class ReverseKNodes {
     }
 
     static void solution(Node head, int k) {
-        head = reverseKNodes(head, k);
-
-        printList(head);
+        printList(reverseKGroup(head, k));
     }
 }
