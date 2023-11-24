@@ -3,7 +3,7 @@ package other.coffee_io.level8;
 import java.util.Scanner;
 
 /**
- * Program to delete key node.
+ * Program to delete any key node with value K.
  * Input:
  * 7
  * 2 81 42 87 90 41 66
