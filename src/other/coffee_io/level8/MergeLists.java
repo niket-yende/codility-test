@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Program to merge lists using priority queue.
- * Input:
+ * Input1:
  * 3
  * 3
  * 1 4 5
@@ -13,8 +13,14 @@ import java.util.Scanner;
  * 1 3 4
  * 2
  * 2 6
- * Output
+ * Output1:
  * 1 1 2 3 4 4 5 6
+ * Input2:
+ * 1
+ * 0
+ * []
+ * Output2:
+ * []
  */
 public class MergeLists {
     static class Node {
