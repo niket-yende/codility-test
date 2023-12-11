@@ -1,0 +1,102 @@
+There is a row of two position switches aligned in a row and numbered consecutively starting from 1. Each of the switches is initially in its "Off" position. Over some number of operations, a left and right index will be provided. When a current is applied to two switches, a NOT operation is applied to each switch in the inclusive interval between those switches. That is, if a switch is off, it is turned on, and vice versa. Given a series of operations, determine their final state. Calculate the sum of all indices where a switch is on.
+1
+2
+
+Example
+3
+operations = [[1, 4], 2, 6], [1, 6]]
+3 operations are performed on a row of switches that are all off initially. In the figure below, '-' represents a switch that is off, and an 'X' represents one that is on.
+
+Parameters
+Index->
+Start
+[1, 4]
+[2, 6]
+[1, 6]
+State
+1234567
+
+After all operations, there are switches in the on position at indices 2, 3 and 4. The sum of the indices is 2+3+4 = 9.
+
+Function Description Complete the function finalState in the editor below. The function must return an integer.
+finalState has the following parameter(s): int operations[q][2]. The th element contains the inclusive range of indices for theth operation.
+
+Returns:
+
+int: the sum of the 1-based indices of the lights in the on position
+
+Constraints
+
+• 1≤9≤105
+
+⚫1 ≤ operations[i][0] ≤ operations[i][1] ≤ 105
+
+► Input Format For Custom Testing
+
+▼Sample Case 0
+
+Sample Input For Custom Testing
+
+STDIN
+
+Function
+
+operations [] size q = 3
+
+323 3
+
+operations[i][] size = 2 (always)
+
+2 4 2]]
+
+operations = [[3, 4], [2, 3], [2, 2, 3]]
+
+Sample Input For Custom Testing
+
+STDIN
+
+Function
+
+3
+
+operations[] size q = 3
+
+2
+
+operations[i][] size = 2 (always)
+
+34
+
+operations = [[3,4], [2,3],[2,
+
+2]]
+
+23
+
+22
+
+Sample Output
+
+4
+
+Explanation
+
+There are q = 3 operations.
+
+Parameters
+
+State
+
+Index->
+
+1234567
+
+Start
+
+[3, 4]
+
+[2, 3]
+
+[2,2]
+
+There is only one switch in the on position at index 4.
