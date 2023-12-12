@@ -67,9 +67,7 @@ operations[i][] size = 2 (always)
 
 34
 
-operations = [[3,4], [2,3],[2,
-
-2]]
+operations = [[3,4], [2,3],[2,2]]
 
 23
 
