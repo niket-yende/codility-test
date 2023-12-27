@@ -3,13 +3,21 @@ import java.util.Scanner;
 
 /**
  * Program to print an array of k digits representing max number.
- * Input:
+ * Input1:
  * 4 6
  * 3 4 6 5
  * 9 1 2 5 8 3
  * 5
- * Output:
+ * Output1:
  * 9 8 6 5 3
+ *
+ * Input2:
+ * 2 2
+ * 3 9
+ * 8 9
+ * 3
+ * Output2:
+ * 9 8 9
  */
 public class MaxKNumber {
 
